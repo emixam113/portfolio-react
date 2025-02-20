@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "DancingScript";
+    src: 
+        local("DancingScript"),
+        url("/src/assets/fonts/DancingScript-VariableFont_wght.ttf") 
+        format('truetype');
+}
+@font-face {
+    font-family: "InknutAntiqua"; 
+    src:
+    local("InknutAntiqua"),
+    url("/src/assets/fonts/InknutAntiqua-Medium.ttf")
+    format('truetype');
+}
