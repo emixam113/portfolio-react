@@ -11,9 +11,9 @@ function Home() {
 
     return(
         <div>
-            <h1 className="font-dancingScript text-white text-center text-3xl underline">Mes Stacks: </h1>
+            <h1 className="font-DancingScript text-white text-center text-3xl underline">Mes Stacks: </h1>
 
-            <StackBox logo={logo}/>
+            <StackBox/>
         </div>
     )
 }

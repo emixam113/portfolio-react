@@ -1,14 +1,24 @@
-import React from "react"
-import imgs from "../assets/imgs/img1.png"
+import logoJavascript from "../assets/imgs/javaScript.png";
+import logoDocker from "../assets/imgs/docker.png";
+import logoMySLQ from "../assets/imgs/MySql.png"; 
+import logoReact from "../assets/imgs/reactJS.png";
+import logoNode from "../assets/imgs/nodeJS.png";
+import logoNestJS from "../assets/imgs/Nestjs.png"; 
+import logoTailwindcss from "../assets/imgs/tailwindcss.png"; 
+import logoTypeScript from "../assets/imgs/TypeScript.png";
+import logoExpress from "../assets/imgs/expressjs.png";
 
-const StackBox = ({logo}) => {
-    console.log(logo)
-    return (
-        <div className="flex flex-wrap justify-center space-x-4">
-            {logo.map((logo, index)=>(
-                <img key={index} src={logo.src} alt={logo.alt} className="w-12 h-12 m-2"/>
-            ))}
-        </div>
-    );
-};
-export default StackBox;
+
+const technologie = [
+    {
+        id: 1, 
+        name: "docker",
+        logo: logoDocker,
+        description: "c'est une plateforme de contenarisation, qui permet d'empaqueter une application et ses dépendance dans un conteneur portable", 
+    }, 
+    
+]
+
+
+
+export default StackBox; 
