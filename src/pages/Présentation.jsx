@@ -6,16 +6,16 @@ function Presentation() {
       <h1 className="capitalize font-DancingScript text-3xl underline text-white mb-10">
         Ma Présentation
       </h1>
-      <div className="flex items-center justify-center gap-10">
+      <div className="flex items-center justify-center gap-10 py-12 px-6">
         {/* Image de gauche */}
         <img
           src="/photo_portfolio.jpg"
           alt="Photo de Maxime"
-          className="h-36 w-36 rounded-lg shadow-lg"
+          className="h-36 w-36 absolute left-40 top-20 rounded-lg shadow-lg"
         />
         
        {/* Texte au centre */}
-<p className="font-InknutAntiqua text-white max-w-lg text-center">
+<p className="font-InknutAntiqua max-w-3xl text-white mx-auto">
   Je m'appelle <strong>Maxime Royan</strong>, j'ai 24 ans et je viens de Vichy.  
   <br />
   <br />
@@ -41,7 +41,7 @@ function Presentation() {
         <img
           src="/logo.png" // Remplace par le bon chemin d'image
           alt="Logo de Maxime"
-          className="h-36 w-36 rounded-lg shadow-lg"
+          className="h-36 w-36 absolute top-20 right-40 shadow-lg rounded-lg"
         />
       </div>
     </section>
