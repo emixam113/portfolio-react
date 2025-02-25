@@ -15,7 +15,7 @@ function Presentation() {
         />
         
        {/* Texte au centre */}
-<p className="font-InknutAntiqua max-w-3xl text-white mx-auto">
+<p className="font-InknutAntiqua max-w-3xl text-white mx-auto text-center">
   Je m'appelle <strong>Maxime Royan</strong>, j'ai 24 ans et je viens de Vichy.  
   <br />
   <br />
