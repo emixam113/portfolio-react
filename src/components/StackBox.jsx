@@ -29,6 +29,7 @@ export default function StackBox() {
 
     return (
         <>
+            {/* Grille des icônes de technologies */}
             <div className="flex flex-wrap justify-center gap-4 md:gap-6 py-10 px-4">
                 {technologies.map((tech, index) => (
                     <motion.div
@@ -43,7 +44,9 @@ export default function StackBox() {
                         <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-gray-100 p-2 rounded-md shadow-md">
                             <img src={tech.logo} alt={tech.name} className="w-full h-full object-contain" />
                         </div>
-                        <h3 className="font-semibold mt-2 text-center text-xs md:text-sm font-InknutAntiqua uppercase">{tech.name}</h3>
+                        <h3 className="font-semibold mt-3 text-center text-xs md:text-sm font-InknutAntiqua uppercase">
+                            {tech.name}
+                        </h3>
                     </motion.div>
                 ))}
             </div>
@@ -51,27 +54,46 @@ export default function StackBox() {
             <AnimatePresence>
                 {selectedTech && (
                     <>
+                        {/* Overlay sombre */}
                         <motion.div
-                            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+                            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setSelectedTech(null)}
                         />
+
+                        {/* Modale corrigée : Centrage forcé avec w-[90%] et transform-none */}
                         <motion.div
                             role="dialog"
-                            className="fixed z-50 top-1/2 left-1/2 w-[90%] max-w-md -translate-x-1/2 -translate-y-1/2 bg-emerald-600 text-white rounded-xl p-6 shadow-2xl font-InknutAntiqua"
-                            initial={{ scale: 0.8, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.8, opacity: 0 }}
+                            className="fixed z-50 top-1/2 left-1/2 w-[90%] max-w-md -translate-x-1/2 -translate-y-1/2 bg-emerald-600 text-white rounded-2xl p-6 shadow-2xl font-InknutAntiqua border border-white/20 flex flex-col items-center"
+                            initial={{ scale: 0.8, opacity: 0, x: "-50%", y: "-50%" }}
+                            animate={{ scale: 1, opacity: 1, x: "-50%", y: "-50%" }}
+                            exit={{ scale: 0.8, opacity: 0, x: "-50%", y: "-50%" }}
                         >
-                            <div className="flex justify-between items-center mb-4">
+                            <div className="flex justify-between items-center mb-6 w-full">
                                 <h2 className="text-xl md:text-2xl font-bold">{selectedTech.name}</h2>
-                                <button className="text-white text-xl font-bold" onClick={() => setSelectedTech(null)}>✕</button>
+                                <button
+                                    className="text-white text-2xl hover:text-gray-300 transition-colors"
+                                    onClick={() => setSelectedTech(null)}
+                                >
+                                    ✕
+                                </button>
                             </div>
-                            <div className="flex flex-col items-center gap-4">
-                                <img src={selectedTech.logo} alt={selectedTech.name} className="w-16 h-16 object-contain bg-white p-2 rounded-md shadow-md" />
-                                <p className="text-center text-sm leading-relaxed">{selectedTech.description}</p>
+
+                            <div className="flex flex-col items-center gap-4 w-full">
+                                <div className="bg-white p-3 rounded-xl shadow-inner flex items-center justify-center">
+                                    <img
+                                        src={selectedTech.logo}
+                                        alt={selectedTech.name}
+                                        className="w-16 h-16 object-contain"
+                                    />
+                                </div>
+
+                                {/* Centrage horizontal du texte avec text-center et w-full */}
+                                <p className="text-center text-sm md:text-base italic leading-relaxed w-full px-2">
+                                    "{selectedTech.description}"
+                                </p>
                             </div>
                         </motion.div>
                     </>

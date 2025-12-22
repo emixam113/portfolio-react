@@ -72,8 +72,6 @@ export default function Projets() {
             <h1 className="text-2xl md:text-4xl font-bold mb-12 text-center font-InknutAntiqua text-white underline underline-offset-8">
                 Mes projets
             </h1>
-
-            {/* Grille : 1 colonne (mobile), 2 (tablette), 3 (ordinateur) */}
             <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 font-InknutAntiqua">
                 {projects.map((proj, index) => (
                     <motion.div
