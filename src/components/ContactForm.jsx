@@ -21,15 +21,12 @@ export default function ContactForm() {
                 form.current.reset();
             })
             .catch((error) => {
-                console.error("Erreur :", error);
-                alert("❌ Une erreur est survenue lors de l’envoi du message.");
+                console.error("Erreur détaillée :", error);
+                alert(`❌ Erreur : ${error.text || "Vérifiez le déploiement sur Vercel"}`);
             });
     };
 
     return (
-        /* w-[95%] : pour ne pas coller aux bords sur de très petits téléphones
-           md:max-w-xl : garde la largeur d'origine sur ordinateur
-        */
         <form
             ref={form}
             onSubmit={sendEmail}
@@ -42,23 +39,22 @@ export default function ContactForm() {
             <div className="space-y-4">
                 <input
                     type="text"
-                    name="from_name"
+                    name="name" // Correspond à {{name}} sur ta capture EmailJS
                     placeholder="Votre nom"
                     required
-                    /* text-base : évite le zoom auto de l'iPhone sur les inputs */
                     className="w-full border border-gray-300 p-4 rounded-xl font-InknutAntiqua text-base focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
                 />
 
                 <input
                     type="email"
-                    name="reply_to"
+                    name="email"
                     placeholder="Votre adresse email"
                     required
                     className="w-full border border-gray-300 p-4 rounded-xl font-InknutAntiqua text-base focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
                 />
 
                 <textarea
-                    name="message"
+                    name="message" // Correspond à {{message}} sur ta capture EmailJS
                     placeholder="Votre message"
                     rows="4"
                     required
@@ -68,7 +64,6 @@ export default function ContactForm() {
 
             <button
                 type="submit"
-                /* w-full : bouton large sur mobile pour cliquer facilement au pouce */
                 className="w-full md:w-auto bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 active:scale-95 transition-all shadow-lg"
             >
                 Envoyer le message
