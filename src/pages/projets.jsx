@@ -153,9 +153,9 @@ export default function Projects() {
                     <button
                         onClick={() => setSelectedTech(null)}
                         className={`text-xs px-4 py-2 rounded-full border transition-all ${!selectedTech
-                                ? "bg-emerald-500 text-white border-emerald-500"
-                                : "bg-white/5 text-slate-300 border-white/10 hover:bg-white/10"
-                            }`}
+                            ? "bg-emerald-500 text-white border-emerald-500"
+                            : "bg-white/5 text-slate-300 border-white/10 hover:bg-white/10"
+                        }`}
                     >
                         Toutes
                     </button>
@@ -166,9 +166,9 @@ export default function Projects() {
                             key={tech}
                             onClick={() => setSelectedTech(selectedTech === tech ? null : tech)}
                             className={`text-xs px-4 py-2 rounded-full border transition-all ${selectedTech === tech
-                                    ? "bg-emerald-500 text-white border-emerald-500"
-                                    : "bg-white/5 text-slate-300 border-white/10 hover:bg-white/10"
-                                }`}
+                                ? "bg-emerald-500 text-white border-emerald-500"
+                                : "bg-white/5 text-slate-300 border-white/10 hover:bg-white/10"
+                            }`}
                         >
                             {tech}
                         </button>
@@ -186,10 +186,10 @@ export default function Projects() {
                                 <motion.div
                                     key={project.id}
                                     layout
-                                    initial={{ opacity: 0, x: -20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    exit={{ opacity: 0, x: -20 }}
-                                    transition={{ duration: 0.25, delay: index * 0.04 }}
+                                    initial={{ opacity: 0, y: 15 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: false, margin: "-40px" }}
+                                    transition={{ duration: 0.25, ease: "easeOut" }}
                                     className="relative"
                                 >
                                     {/* Point sur la timeline */}
@@ -203,9 +203,9 @@ export default function Projects() {
                                     {/* Badge type au-dessus de la carte */}
                                     <div className="mb-1.5">
                                         <span className={`text-xs px-2.5 py-0.5 rounded-full border ${project.type === "Formation" ? "bg-purple-50 text-purple-600 border-purple-200" :
-                                                project.type === "Scolaire" ? "bg-blue-50 text-blue-600 border-blue-200" :
-                                                    "bg-emerald-50 text-emerald-600 border-emerald-200"
-                                            }`}>
+                                            project.type === "Scolaire" ? "bg-blue-50 text-blue-600 border-blue-200" :
+                                                "bg-emerald-50 text-emerald-600 border-emerald-200"
+                                        }`}>
                                             {project.type}
                                         </span>
                                     </div>
