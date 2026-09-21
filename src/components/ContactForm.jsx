@@ -64,7 +64,7 @@ export default function ContactForm() {
 
             <button
                 type="submit"
-                className="w-full md:w-auto bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 active:scale-95 transition-all shadow-lg"
+                className="w-full md:w-auto bg-emerald-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-emerald-900 active:scale-95 transition-all shadow-lg"
             >
                 Envoyer le message
             </button>

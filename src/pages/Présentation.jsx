@@ -17,11 +17,6 @@ export default function Presentation() {
                     {/* === PHOTO === */}
                     <div className="flex justify-center md:justify-start">
                         <div className="relative">
-                            {/*
-                             On garde la structure simple d'origine, avec un calque
-                             en absolute parfaitement ajusté qui applique l'effet de pulse
-                             uniquement sur la bordure épaisse vert profond.
-                          */}
                             <div className="absolute inset-0 border-4 border-emerald-600 rounded-2xl pointer-events-none animate-pulse z-20 shadow-[0_0_15px_rgba(5,150,105,0.4)]" />
 
                             <img
@@ -53,17 +48,17 @@ export default function Presentation() {
                         {/* Citation décorative */}
                         <span className="block text-7xl leading-none text-emerald-400/20 italic select-none -mb-4">"</span>
 
-                        {/* Corps de texte */}
+                        {/* Corps de texte mis à jour */}
                         <div className="space-y-4 text-blue-100/80 text-sm leading-relaxed">
                             <p>
-                                Jeune{" "}
+                                Concepteur développeur d'applications diplômé, je conçois et développe des{" "}
                                 <span className="text-emerald-400 font-semibold">
-                                  concepteur développeur d'application
+                                  solutions web et mobiles sur-mesure
                               </span>{" "}
-                                fraîchement diplômé, je cherche une équipe qui me donnera la chance de grandir et de contribuer concrètement.
+                                pour donner vie à vos projets.
                             </p>
                             <p>
-                                Curieux, rigoureux et motivé, mon objectif est de mettre mes compétences en pratique dans un environnement stimulant — et d'en apprendre toujours davantage.
+                                Curieux, rigoureux et fort d'une solide année de pratique intensive et de conception de projets complexes, je transforme vos besoins en applications performantes, ergonomiques et prêtes pour le terrain.
                             </p>
                         </div>
 
@@ -72,6 +67,7 @@ export default function Presentation() {
                             <a
                                 href="/Maxime_Royan_CDA.pdf"
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-900 font-semibold text-sm px-6 py-3 rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:-translate-y-0.5 transition-all active:scale-95"
                             >
                                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -82,6 +78,7 @@ export default function Presentation() {
                             <a
                                 href="https://www.linkedin.com/in/maxime-royan-368963289"
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white/25 text-blue-100/85 text-sm px-6 py-3 rounded-xl hover:-translate-y-0.5 transition-all"
                             >
                                 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
