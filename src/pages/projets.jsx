@@ -101,12 +101,19 @@ const projects = [
     },
     {
         id: 13,
-        title: "Alternative Google Scholar",
+        title: "Scholarpsy une platforme de recherche pour les étudiants de psychologies",
         description: "Regroupe les meilleurs articles scientifiques pour faire un mémoire de psychologie.",
         context: "Projet pour aider les étudiants de psychologie dans leurs recherches.",
         technologie: ["Next.js", "Tailwind CSS", "TypeScript"],
         type: "Personnel",
     },
+    {
+        id: 14,
+        title: "Contribution open-source",
+        description: "petit package NPM pour l'accessibilité pour toute les personnes dys",
+        technologie: ["CSS", "open-source"],
+        type: "Open-source",
+    }
 ];
 
 const ALL_TECHS = [...new Set(projects.flatMap((p) => p.technologie))].sort();
